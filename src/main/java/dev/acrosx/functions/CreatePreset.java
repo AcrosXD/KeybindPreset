@@ -9,6 +9,7 @@ public class CreatePreset {
     public static int createPreset(String name) {
         Configuration config = KeybindPresetMod.config;
         if (config.hasCategory(name)) {
+            //Code error: 1, the preset allready exist 
             return 1;
         }
         config.getCategory(name);
