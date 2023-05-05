@@ -17,3 +17,5 @@ We can resolve this by adding our own keybind system for the mod or find a way t
         //i'am in class, i forgot the code 💀
     }
 ```
+
+For creating our own keybinds system this is not possible without modify the config system, the current way create confict with the keybinds allready registred in the configuration.
