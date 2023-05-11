@@ -11,8 +11,9 @@ import java.io.IOException;
 
 public class PresetParametersGui extends GuiScreen implements IPresetParametersGui {
 
-    private Configuration config = KeybindPresetMod.config;
-    private GuiButton button0 = new GuiButton(0, this.width / 2 - 100, this.height / 2 - 100, "NONE");
+    private final Configuration config = KeybindPresetMod.config;
+    private final GuiButton button0 = new GuiButton(0, this.width / 2 - 100, this.height / 2 - 100, "NONE");
+    //to finish
     private String presetName;
 
     public PresetParametersGui(String presetName) {

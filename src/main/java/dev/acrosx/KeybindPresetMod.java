@@ -39,7 +39,7 @@ public class KeybindPresetMod {
         for (String name : config.getCategoryNames()) {
             int keyBind = config.get(name, "presetActivation", 0).getInt();
             KeyBinding keyBinding = new KeyBinding(name, keyBind, "KeybindPreset");
-            Minecraft.getMinecraft().gameSettings.keyBindings = (KeyBinding[]) java.util.Arrays.copyOf(Minecraft.getMinecraft().gameSettings.keyBindings, Minecraft.getMinecraft().gameSettings.keyBindings.length + 1);
+            Minecraft.getMinecraft().gameSettings.keyBindings = java.util.Arrays.copyOf(Minecraft.getMinecraft().gameSettings.keyBindings, Minecraft.getMinecraft().gameSettings.keyBindings.length + 1);
             Minecraft.getMinecraft().gameSettings.keyBindings[Minecraft.getMinecraft().gameSettings.keyBindings.length - 1] = keyBinding;
         }
 
