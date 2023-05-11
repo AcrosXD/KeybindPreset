@@ -15,7 +15,6 @@ public class SetPreset {
         }
 
         for (String key : config.getCategory(name).getValues().keySet()) {
-            //convert string to keybinding
             for (KeyBinding keyBinding : Minecraft.getMinecraft().gameSettings.keyBindings) {
                 if (keyBinding.getKeyDescription().equals(key)) {
                     Minecraft.getMinecraft().gameSettings.setOptionKeyBinding(keyBinding, config.get(name, key, 0).getInt());
@@ -24,7 +23,7 @@ public class SetPreset {
         }
         Minecraft.getMinecraft().gameSettings.saveOptions();
         Minecraft.getMinecraft().gameSettings.loadOptions();
-        Minecraft.getMinecraft().thePlayer.addChatMessage(new net.minecraft.util.ChatComponentText(EnumChatFormatting.GRAY + "Setting preset '" + EnumChatFormatting.DARK_AQUA + name + EnumChatFormatting.GRAY + "' with current keybindings set."));
+        Minecraft.getMinecraft().thePlayer.addChatMessage(new net.minecraft.util.ChatComponentText(EnumChatFormatting.GRAY + "Keybinding preset '" + EnumChatFormatting.DARK_AQUA + name + EnumChatFormatting.GRAY + "' has been set."));
     }
 
 }

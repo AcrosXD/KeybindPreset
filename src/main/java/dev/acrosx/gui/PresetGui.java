@@ -23,7 +23,11 @@ public class PresetGui extends GuiScreen {
             }
         }
 
-
         super.drawScreen(mouseX, mouseY, partialTicks);
+    }
+    protected void actionPerformed(GuiButton button) {
+        if (button.id >= 806) {
+            mc.displayGuiScreen(new PresetParametersGui(button.displayString));
+        }
     }
 }
